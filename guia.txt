@@ -1,0 +1,48 @@
+1) npm create vite@latest .
+2) npm install react-router-dom
+3) npm install bootstrap@5.3.3
+    en index.html si no se usa modales
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <script type="module" src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> // agregar type="module".
+    //
+
+    npm install react-bootstrap bootstrap
+    instalar npm install react-bootstrap bootstrap y colocar en main.jsx al usar modales
+        import "bootstrap/dist/css/bootstrap.min.css";
+        import "bootstrap/dist/js/bootstrap.bundle.js";
+
+
+
+    limpiar app.css, index.css
+4) crear las carpetas pages y components dentro de src
+5) crear los componentes Footer.jsx y Header.jsx "aplicar el rafce"
+    importar el navbar y un footer de bootstrap
+6) crear las paginas Inicio, Tienda, Movil, Laptop, Categorias, Contactos "aplicar el rafce"
+7) crear el sistema de ruteo comenzando por el app
+    <BrowserRouter>
+        <Header/>
+        <Routes>
+            <Route path="/" element={<Inicio/>} />
+            <Route path="/tienda" element={<Tienda/>} />
+            <Route path="/laptop" element={<Laptop/>} />
+            <Route path="/movil" element={<Movil/>} />
+            <Route path="/categorias/:id" element={<Categorias/>} />
+            <Route path="/contactos" element={<Contactos/>} />
+            <Route path="*" element={<Inicio/>} />
+        </Routes>
+        <Footer/>
+    </BrowserRouter>
+8) modificar la barra de navegacion con todos los element de las paginas "Inicio, Tienda, Movil, Laptop, Categorias, Contactos"
+        <Link to="/inicio" className="nav-link active" aria-current="page" href="/">Inicio</Link> agregando Link to="/" con la ruta a la paginas
+9) agregar un carrusel en el inicio
+
+
+
+
+Carrito con contex
+1) agregar la carpeta contexts dentro de src
+    crear dentro de contexts ShoppingCartContext.jsx
+
+2) npm i react-bootstrap-icons
+agrergamos el icono carrito en el Header 
+<button className='btn btn-danger me-2'  >  <CartFill  size={25} /> <span className="bagbe bg-secondary"></span></button>
