@@ -40,10 +40,10 @@ const Card = ({producto}) => {
                 <div className="card-footer text-center">
                     <button className="btn btn-info btn-sm mx-1"  onClick={handleShow}>Detalle</button>
                     <hr/>
-                    <button className="btn btn-success btn-sm mx-1" onClick={()=>agregar(producto)}>+ Add to Cart</button>
+                    <button className="btn btn-success btn-sm mx-1" onClick={()=>agregar(producto)}>+ Agregar</button>
                     {
                         totalProd > 0 && (
-                            <button className="btn btn-danger btn-sm mx-1" onClick={()=>eliminar(producto)}>- Add to Cart</button>
+                            <button className="btn btn-danger btn-sm mx-1" onClick={()=>eliminar(producto)}>- Restar</button>
                         )
 
                     }

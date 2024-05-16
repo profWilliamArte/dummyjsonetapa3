@@ -100,18 +100,28 @@ const Header = () => {
                                 </div>
                             </div>
                         ))}
-                        <div className="card p-3">
-                            <h3>Total productos : {totalCantidad}</h3>
-                            <h3>Total A Pagar : {totalPrecio}</h3>
+                        {cart.length > 0 ? (
+                            <>
+                                <div className="card p-3">
+                                <h5>Total Productos: {totalCantidad}</h5>
+                                <h5>Total A Pagar: {totalPrecio}$</h5>
+                                </div>
+                                <div className="card p-3 my-3">
+                                <button className="btn btn-danger btn-sm mx-1 mb-2" onClick={() => vaciar()}>
+                                    Vaciar Carrito
+                                </button>
+                                <button className="btn btn-success btn-sm mx-1" onClick={() => comprar()}>
+                                    Comprar
+                                </button>
+                                </div>
+                            </>
+                            ) : (
+                            <div className="card p-3 my-3">
+                                <h5>Carrito Vacío</h5>
+                            </div>
+                            )}
                         </div>
-                        <div className="card p-3 my-3">
-                            <button className="btn btn-danger btn-sm mx-1 mb-2" onClick={()=>vaciar()}>Vaciar Carrito</button>
-                            <button className="btn btn-success btn-sm mx-1" onClick={()=>comprar()}>Comprar</button>
-                        </div>
-
-                        
-                </div>
-                </div>
+                    </div>
           
 
 
